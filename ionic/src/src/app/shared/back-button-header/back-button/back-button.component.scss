@@ -1,0 +1,50 @@
+.bg-appoint-darkblue {
+  background-color: #012547;
+}
+
+.back-container {
+  width: 20vw;
+  height: 15vw;
+  z-index: 10;
+  margin-bottom: 2%;
+  right: 35px;
+  top: -15px;
+  position: absolute;
+}
+
+.back-clipped-rect {
+  position: absolute;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  width: 45vw;
+  height: 35vw;
+  align-content: center;
+  display: grid;
+}
+
+@media only screen and (min-width: 500px) {
+  .back-container {
+    width: 180px;
+    height: 180px;
+    right: -45px;
+    top: -17px;
+  }
+  .back-clipped-rect {
+    width: 225px;
+    height: 175px;
+  }
+}
+
+.back-rect-data {
+  position: relative;
+  align-content: center;
+  display: grid;
+  height: 15vw;
+}
+
+.back-button {
+  text-align: center;
+  height: 40vw;
+  --background: transparent;
+  left: -10%;
+  position: relative;
+}

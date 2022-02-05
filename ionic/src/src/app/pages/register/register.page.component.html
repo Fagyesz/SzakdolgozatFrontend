@@ -1,0 +1,54 @@
+
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="background-image"></div>
+  <div  id="container">
+    <ion-grid fixed="true">
+      <ion-row >
+        <ion-col >
+          <div class="flex" >
+<!--            <div class="hidenbox"></div>-->
+            <div class="border">
+              <div class="image">
+                <img src="assets/images/brand_logo_plain.png" alt="login-logo">
+              </div>
+            </div>
+          </div>
+          <p class="title">Regisztráció</p>
+          <p class="log">{{log}}</p>
+
+          <span class="p-float-label mb-4">
+            <input id="name" type="text" name="name" pInputText [(ngModel)]="name">
+            <label for="name">Username</label>
+          </span>
+
+          <span class="p-float-label mb-4">
+            <input id="email" type="text" name="email" pInputText [(ngModel)]="email">
+            <label for="email">Email</label>
+          </span>
+
+          <span class="p-float-label mb-4">
+            <p-password inputId="password" name="password" id="password" [(ngModel)]="password"></p-password>
+            <label for="password">Password</label>
+          </span>
+
+          <span class="p-float-label mb-4 " >
+            <p-password [feedback]="false" inputId="password_confirmation" name="password" id="password_confirmation" [(ngModel)]="password_confirmation"></p-password>
+            <label for="password_confirmation">Password Confirmation</label>
+          </span>
+
+            <div class="checkresp">
+              <ion-checkbox color='primary'  (ionChange)="isChecked($event)" [(ngModel)]="read_me"></ion-checkbox>
+              <ion-label class="read_me"> &nbsp; &nbsp; Elolvastam a <a href="">felhasználási feltételeket.</a></ion-label>
+            </div>
+            <ion-button color='primary' (click) ="register()">Regisztráció</ion-button>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>

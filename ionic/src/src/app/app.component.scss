@@ -1,0 +1,30 @@
+ion-menu.md ion-content {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+ion-menu.ios ion-content {
+  --padding-bottom: 20px;
+}
+
+app-sidebar {
+  height: 100%;
+}
+
+.header {
+  background: #111111;
+  width: 100%;
+  position: absolute;
+  float: right;
+}
+
+ion-menu {
+  --background: transparent;
+  --width: 45%;
+}
+
+ion-content {
+  --background: transparent !important;
+}

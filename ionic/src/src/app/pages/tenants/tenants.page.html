@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <h2 class="text-center">Tenants</h2>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="tenant-card-container d-grid">
+    <ion-card *ngFor="let tenant of tenants" class="tenant-card" (click)="selectTenant(tenant)">
+      <div class="background" style="background: url('../../../assets/images/background1.jpg')"></div>
+      <div class="foreground position-absolute">
+        <div class="tenant-card-header">
+          <h2 class="text-center">{{tenant.id}}</h2>
+          <hr>
+        </div>
+        <div class="tenant-card-body text-center">
+          {{tenant.description}}
+        </div>
+      </div>
+      <div *ngIf="selectedTenant === tenant" class="modify-toolbar d-grid">
+        <button class="bg-dark tenant-button"><i class="pi pi-trash text-danger m-auto"></i></button>
+        <button class="bg-dark tenant-button"><i class="pi pi-pencil text-white m-auto"></i></button>
+        <button class="bg-dark tenant-button"><i class="pi pi-eye text-info m-auto"></i></button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

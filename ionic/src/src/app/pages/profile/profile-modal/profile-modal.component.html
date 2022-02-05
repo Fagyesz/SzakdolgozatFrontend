@@ -1,0 +1,12 @@
+<div class="modal-container w-100 h-100 position-relative m-auto">
+  <button (click)="close()" class="w-100 h-100 modal-close-button"></button>
+  <ion-card class="w-auto d-grid mx-3 my-auto position-absolute confirmation-card">
+    <ion-label class="mt-4 mb-3 fs-6 w-auto mx-3">Biztosan szeretné törölni a fiókját?</ion-label>
+    <ion-label class="mx-3 w-auto mb-5">Adja meg a jelszavát, majd nyomjon a Megerősítés gombra!</ion-label>
+    <span class="p-float-label mx-3 w-75 mb-3 input-area">
+      <input class="position-relative mx-3 w-100" id="password" type="password" name="password" pInputText>
+      <label for="password">Jelszó:</label>
+    </span>
+    <button (click)="deleteUser()" class="w-25 mx-auto position-relative mb-1 fw-bold confirmation-button">Megerősítés</button>
+  </ion-card>
+</div>

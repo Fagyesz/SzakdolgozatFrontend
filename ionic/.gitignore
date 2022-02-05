@@ -1,0 +1,7 @@
+.idea
+.idea/*
+
+src/yarn.lock
+src/package-lock.json
+
+src/android/

@@ -1,0 +1,137 @@
+@use '../../../theme/colors';
+@use '../../../theme/values';
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 2vh;
+  margin-top: 0%;
+  color: colors.$registerLoginBasicColor;
+  display:flex;
+
+}
+.p-float-label{
+  display:grid;
+}
+:host ::ng-deep .p-password{
+  display:grid;
+  width:100%;
+}
+.accept{
+  font-size: values.$fontSizeSmall;
+  margin:0 0 0 2vw;
+  text-align: center;
+  ion-checkbox{
+    --size:5%;
+    --background: colors.$registerLoginBasicColor;
+  }
+}
+
+.title {
+  font-size: values.$fontSizeLarge;
+  margin-bottom: 5vh;
+  color: colors.$colorBlack;
+}
+
+#container a {
+  text-decoration: none;
+
+}
+
+.image
+{
+  border-radius: 0%;
+  overflow: hidden;
+  height: 15vh;
+  display: flex;
+}
+
+.border{
+  border: 0px solid #dee2e6!important;
+
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+
+}
+
+ion-content{
+  --ion-background-color: #12577c;
+}
+
+ion-input{
+  margin-bottom: 8%;
+  border-radius: 8px;
+  --background: #186b9b;
+  --placeholder-opacity:1;
+  height: 7vh;
+  font-size: values.$fontSizeSmall;
+}
+
+ion-button{
+  --background:#0a1d4d;
+  width: 50vw;
+  height: 8vh;
+  margin-top: 5vh;
+  font-size: values.$fontSizeMedium;
+}
+
+ion-label{
+  font-size: values.$fontSizeSmall;
+  color: colors.$colorBlack;
+}
+.log{
+  font-size: values.$fontSizeSmall;
+  color: colors.$colorBlack;
+}
+
+.read_me{
+  color: colors.$colorBlack;
+}
+
+.input-bg{
+  background-color: var(--ion-background-color-rgb);
+}
+.title{
+  color: whitesmoke;
+}
+.hidenbox{
+  height: 20vh;
+  width: 20vh;
+}
+.checkresp{
+  align-items: center ;
+  justify-content: center;
+  display: flex;
+}
+@media screen and (min-width: 280px) {
+  #container {
+    top: 50%;
+  }
+
+}
+
+
+@media screen and (min-width: 360px) {
+  #container {
+    top: 50%;
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+  #container {
+    top: 50%;
+  }
+
+}

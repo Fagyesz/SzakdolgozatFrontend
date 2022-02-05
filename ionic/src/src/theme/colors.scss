@@ -1,0 +1,96 @@
+$backgroundLightBlue: #2c86b0;
+$backgroundBlue: #082944;
+$colorWhite: #fff;
+$colorBlack: #000000;
+$colorDelete: #790505fb;
+$colorEdit: #1234577c;
+$PostBorderTimeline: #08C1DA;
+$registerLoginBasicColor:#d7dcdf;
+
+input {
+  background: #032043 !important;
+}
+
+:root {
+  /** delete **/
+  --ion-color-delete: #790505;
+  --ion-color-delete-rgb: 125,5,5;
+  --ion-color-delete-contrast: #ffffff;
+  --ion-color-delete-contrast-rgb: 255,255,255;
+  --ion-color-delete-shade: #6e0404;
+  --ion-color-delete-tint: #8a1e1e;
+  /** edit **/
+  --ion-color-edit: #123457;
+  --ion-color-edit-rgb: 18,52,87;
+  --ion-color-edit-contrast: #ffffff;
+  --ion-color-edit-contrast-rgb: 255,255,255;
+  --ion-color-edit-shade: #102e4d;
+  --ion-color-edit-tint: #2a4868;
+  /** button **/
+  --ion-color-button: #2c86b0;
+  --ion-color-button-rgb: 44,134,176;
+  --ion-color-button-contrast: #ffffff;
+  --ion-color-button-contrast-rgb: 255,255,255;
+  --ion-color-button-shade: #27769b;
+  --ion-color-button-tint: #4192b8;
+  /** checkbox **/
+  --ion-color-checkbox: #d7dcdf;
+  --ion-color-checkbox-rgb: 215,220,223;
+  --ion-color-checkbox-contrast: #000000;
+  --ion-color-checkbox-contrast-rgb: 0,0,0;
+  --ion-color-checkbox-shade: #bdc2c4;
+  --ion-color-checkbox-tint: #dbe0e2;
+  /** back **/
+  --ion-color-back: #082944;
+  --ion-color-back-rgb: 8,41,68;
+  --ion-color-back-contrast: #ffffff;
+  --ion-color-back-contrast-rgb: 255,255,255;
+  --ion-color-back-shade: #07243c;
+  --ion-color-back-tint: #213e57;
+
+}
+
+.ion-color-delete {
+  --ion-color-base: var(--ion-color-delete);
+  --ion-color-base-rgb: var(--ion-color-delete-rgb);
+  --ion-color-contrast: var(--ion-color-delete-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-delete-contrast-rgb);
+  --ion-color-shade: var(--ion-color-delete-shade);
+  --ion-color-tint: var(--ion-color-delete-tint);
+}
+
+.ion-color-edit {
+  --ion-color-base: var(--ion-color-edit);
+  --ion-color-base-rgb: var(--ion-color-edit-rgb);
+  --ion-color-contrast: var(--ion-color-edit-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-edit-contrast-rgb);
+  --ion-color-shade: var(--ion-color-edit-shade);
+  --ion-color-tint: var(--ion-color-edit-tint);
+}
+
+.ion-color-button {
+  --ion-color-base: var(--ion-color-button);
+  --ion-color-base-rgb: var(--ion-color-button-rgb);
+  --ion-color-contrast: var(--ion-color-button-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-button-contrast-rgb);
+  --ion-color-shade: var(--ion-color-button-shade);
+  --ion-color-tint: var(--ion-color-button-tint);
+}
+
+.ion-color-checkbox {
+  --ion-color-base: var(--ion-color-checkbox);
+  --ion-color-base-rgb: var(--ion-color-checkbox-rgb);
+  --ion-color-contrast: var(--ion-color-checkbox-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-checkbox-contrast-rgb);
+  --ion-color-shade: var(--ion-color-checkbox-shade);
+  --ion-color-tint: var(--ion-color-checkbox-tint);
+}
+
+.ion-color-back {
+  --ion-color-base: var(--ion-color-back);
+  --ion-color-base-rgb: var(--ion-color-back-rgb);
+  --ion-color-contrast: var(--ion-color-back-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-back-contrast-rgb);
+  --ion-color-shade: var(--ion-color-back-shade);
+  --ion-color-tint: var(--ion-color-back-tint);
+}

@@ -1,0 +1,28 @@
+@use "src/theme/colors";
+
+.title-rectangle {
+  background: colors.$backgroundBlue;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 65vw;
+  height: 65vw;
+  position: absolute;
+  right: -16vw;
+  top: -17vw;
+}
+
+.appoint-title{
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  width: 35vw;
+  height: 10vw;
+}
+
+@media only screen and (min-width: 450px) {
+  .title-rectangle {
+    width: 350px;
+    height: 350px;
+    right: -100px;
+    top: -110px;
+  }
+}

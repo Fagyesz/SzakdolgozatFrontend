@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>test</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+{{ 'asd' | translate }} <br>
+
+  Value: {{ value ? value : 'empty' }}
+
+<form #form="ngForm" [classList]="['mt-5']">
+  <span class="p-float-label">
+    <input id="float-input" type="text" name="test_input" pInputText [(ngModel)]="value">
+    <label for="float-input">Username</label>
+  </span>
+  <button (click)="asd()"></button>
+</form>
+</ion-content>

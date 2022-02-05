@@ -1,0 +1,13 @@
+.buttons {
+  width: 75%;
+  height: 50%;
+  display: grid;
+  right: -20px;
+  position: relative;
+  text-align: end;
+}
+
+.buttons button {
+  font-size: small;
+  margin: 5px;
+}

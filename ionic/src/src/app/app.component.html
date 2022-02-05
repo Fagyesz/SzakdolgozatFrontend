@@ -1,0 +1,12 @@
+<ion-app>
+  <ion-menu contentId="main-content" menuId="sidebar" type="overlay">
+  <!-- Sidebar background bound to ion-menu      -->
+      <app-sidebar></app-sidebar>
+  </ion-menu>
+
+  <ion-content>
+    <ion-router-outlet id="main-content" (activate)="onActivate($event)"></ion-router-outlet>
+    <p-toast position="bottom-center"></p-toast>
+    <p-confirmDialog header="Megerősítés" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+  </ion-content>
+</ion-app>

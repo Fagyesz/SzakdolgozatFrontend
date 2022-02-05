@@ -1,0 +1,69 @@
+@use '../../../theme/colors';
+@use '../../../theme/values';
+
+ion-content{
+  --ion-background-color: #12577c;
+}
+
+.title {
+  font-size: values.$fontSizeLarge;
+  margin-bottom: 10vh;
+  color: colors.$colorBlack;
+}
+.p-float-label{
+  display:grid;
+}
+:host ::ng-deep .p-password{
+  display:grid;
+
+  width:100%;
+}
+
+.container {
+  text-align: center;
+  color: colors.$registerLoginBasicColor;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display:flex;
+
+}
+
+.border{
+  border: 4px solid colors.$colorBlack;
+  border-radius: 50%;
+  width: fit-content;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+
+}
+
+app-floating-input{
+  margin-bottom: 8%;
+  height: 8vh;
+}
+
+ion-button{
+  width: 50vw;
+  height: 8vh;
+  margin-top: 5vh;
+  font-size: 4vw;
+}
+.remember{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image
+{
+  border-radius: 0%;
+  overflow: hidden;
+  height: 15vh;
+  display: flex;
+
+}

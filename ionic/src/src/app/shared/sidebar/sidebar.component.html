@@ -1,0 +1,18 @@
+<!--TODO: Make sidebar slimmer -->
+<ion-list class="inbox-list">
+  <div class="user-profile" [hidden]="!isLoggedIn">
+    <div class="picture-frame">
+      <img class="profile_picture" src="../../../assets/icon/placeholder.png" alt="Profile picture">
+    </div>
+    <ion-note> {{ account.user?.email }} </ion-note>
+  </div>
+  <ion-menu-toggle auto-hide="false" *ngFor="let p of this.pages">
+    <div class="sidebar-item">
+      <a class="sb-item-content" href="{{p.url}}">
+        <div>
+          <ion-label>{{ p.title }}</ion-label>
+        </div>
+      </a>
+    </div>
+  </ion-menu-toggle>
+</ion-list>

@@ -1,0 +1,69 @@
+<ion-content>
+  <p-table [globalFilterFields]="['name', 'role']"
+           sortField="name"
+           [loading]="loading"
+           [paginator]="true"
+           [rows]="10"
+           [showCurrentPageReport]="true"
+           [rowsPerPageOptions]="[10,25,50]"
+           [value]="staff"
+           responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="name"> Kiszolgáló <p-sortIcon field="name"></p-sortIcon></th>
+        <th> Jog </th>
+        <th> Műveletek </th>
+      </tr>
+      <tr>
+        <th>
+          <p-columnFilter type="text" field="name" matchMode="contains">
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <input #nameInp pInputText (keyup)="filter(nameInp.value)" [ngModel]="value" type="text" class="min-130">
+            </ng-template>
+          </p-columnFilter>
+        </th>
+        <th>
+          <p-columnFilter type="text" field="role" matchMode="contains">
+            <ng-template pTemplate="filter">
+              <p-multiSelect defaultLabel="Mind" [showHeader]="false" [options]="roles" #roleChk (onChange)="filterForRole(roleChk.value)"></p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+        </th>
+        <th>
+
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-current>
+      <tr>
+        <td class="pe-1">
+          {{current.name}}
+        </td>
+        <td>
+          <p *ngFor="let role of current.roles">{{role.name}}</p>
+        </td>
+        <td class="p-0 position-relative">
+          <div class="buttons">
+            <span *ngFor="let role of roles" class="p-buttonset">
+              <button *ngIf="!hasRole(current, role)"
+                      pButton label="{{role}} pozíció hozzáadása"
+                      icon="pi pi-arrow-up"
+                      class="p-button-success py-2"
+                      (click)="assign(current, role)">
+              </button>
+
+              <button *ngIf="hasRole(current, role)"
+                      pButton
+                      label="{{role}} pozíció elvétele"
+                      icon="pi pi-arrow-down"
+                      class="p-button-danger py-2"
+                      [loading]=""
+                      (click)="revoke(current, role)">
+              </button>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</ion-content>

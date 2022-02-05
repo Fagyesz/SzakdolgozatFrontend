@@ -1,0 +1,45 @@
+<ion-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-grid fixed="true">
+
+      <ion-row justify-content-center>
+        <ion-col align-self-center>
+          <div class="flex">
+
+              <div class="image">
+                <img src="assets/images/brand_logo_plain.png" alt="login-logo">
+              </div>
+
+          </div>
+          <p class="title">Bejelentkezés</p>
+
+          <span class="p-float-label mb-4">
+            <input id="email" type="text" name="email" pInputText [(ngModel)]="email">
+            <label for="email">Email</label>
+          </span>
+
+          <span class="p-float-label mb-4">
+            <p-password inputId="password" name="password" id="password" [feedback]="false" [(ngModel)]="password"></p-password>
+            <label for="password">Password</label>
+          </span>
+
+
+          <div class="remember">
+
+            <ion-checkbox color='primary'  (ionChange)="isChecked($event)" [(ngModel)]="remember_me"></ion-checkbox>
+            <ion-label class="remember_me">&nbsp; &nbsp; Emlékezz rám</ion-label>
+
+          </div>
+
+          <ion-button (click)="RedirectToResetPasswordPage()">Jelszó visszaállítás</ion-button>
+
+          
+          <ion-button color='primary' (click) ="login()">Bejelentkezés</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

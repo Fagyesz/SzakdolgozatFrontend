@@ -1,0 +1,46 @@
+@use "src/theme/colors";
+
+.bg-appoint-darkblue {
+  background-color: colors.$backgroundBlue;
+}
+
+.brand-container {
+  width: 50vw;
+  height: 50vw;
+  z-index: -10;
+  position: absolute;
+}
+
+.brand-image {
+  position: absolute;
+  width: 27vw;
+  height: 22vw;
+  transform: translate(10vw, 10vw);
+}
+
+.clipped-rect {
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: translate(-11vw, -11vw);
+  width: 45vw;
+  height: 45vw;
+}
+
+@media only screen and (min-width: 500px) {
+  .brand-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .brand-image {
+    width: 130px;
+    height: 100px;
+    transform: translate(70px, 70px);
+  }
+
+  .clipped-rect {
+    width: 250px;
+    height: 250px;
+    transform: translate(-70px, -70px);
+  }
+}

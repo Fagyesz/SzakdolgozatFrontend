@@ -1,0 +1,52 @@
+<ion-content>
+  <app-back-button-header [title]="(enabled ? 'Profil Szerkesztése' : this.user.name)" [email]="(enabled ? '' : this.user.email)"></app-back-button-header>
+  <ion-card class="profile-page-container">
+    <ion-avatar class="picture-frame">
+      <img class="profile_picture" src="../../../assets/icon/placeholder.png" alt="Profile picture">
+      <ion-button [hidden]="!enabled" class="edit-picture-button fs-3 w-50"><i class="pi pi-camera"></i></ion-button>
+    </ion-avatar>
+    <div class="user-data-container">
+      <div class="edit-button-container">
+        <ion-button (click)="edit()" class="edit-profile-button"><i class="pi pi-pencil"></i></ion-button>
+      </div>
+      <div class="input-container">
+        <span *ngIf="enabled" class="p-float-label mb-4">
+          <input id="name" type="text" name="name" [(ngModel)]="this.user.name" pInputText>
+          <label for="name">Teljes név:</label>
+        </span>
+        <span *ngIf="enabled" class="p-float-label mb-4">
+          <input id="email" type="text" name="email" [(ngModel)]="this.user.email" pInputText>
+          <label for="email">Email:</label>
+        </span>
+        <span class="p-float-label mb-4">
+          <input [disabled]="!enabled" id="phone-number" type="text" name="phone-number" [(ngModel)]="this.user.extra['phone_number']" pInputText>
+          <label for="phone-number">Telefonszám:</label>
+        </span>
+        <span class="p-float-label mb-4">
+          <input [disabled]="!enabled" id="country" type="text" name="country" [(ngModel)]="this.user.extra['country']" pInputText>
+          <label for="country">Ország:</label>
+        </span>
+        <span class="p-float-label mb-4">
+          <input [disabled]="!enabled" id="postal-code" type="text" name="postal-code" [(ngModel)]="this.user.extra['postal-code']" pInputText>
+          <label for="postal-code">Irányítószám:</label>
+        </span>
+        <span class="p-float-label mb-4">
+          <input [disabled]="!enabled" id="city" type="text" name="city" [(ngModel)]="this.user.extra['city']" pInputText>
+          <label for="city">Város:</label>
+        </span>
+        <span class="p-float-label mb-4">
+          <input [disabled]="!enabled" id="street" type="text" name="street" [(ngModel)]="this.user.extra['street']" pInputText>
+          <label for="street">Utca:</label>
+        </span>
+        <span class="p-float-label mb-4">
+          <input [disabled]="!enabled" id="house-number" type="text" name="house_number" [(ngModel)]="this.user.extra['house_number']" pInputText>
+          <label for="house-number">Házszám:</label>
+        </span>
+      </div>
+      <div class="managing-button-container">
+        <ion-button (click)="openDeleteConfirmation()" class="delete-profile-button"><i class="pi pi-trash"></i></ion-button>
+        <ion-button (click)="update()" [hidden]="!enabled" class="save-profile-button"><i class="pi pi-check"></i></ion-button>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

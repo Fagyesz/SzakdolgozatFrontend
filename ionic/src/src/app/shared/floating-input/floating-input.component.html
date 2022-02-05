@@ -1,0 +1,6 @@
+<ion-item [classList]="classes" color="#000000" formGroup>
+  <ion-label [classList]="labelClasses" style="z-index: 10; font-size: x-large" position="floating">
+    <ng-content></ng-content>
+  </ion-label>
+  <ion-input style="font-size: x-large" [(ngModel)]="value" [type]="inputType" name="{{name}}" id="{{name}}" [placeholder]="placeholder" [classList]="inputClasses" (ionChange)="onChange($event)"></ion-input>
+</ion-item>

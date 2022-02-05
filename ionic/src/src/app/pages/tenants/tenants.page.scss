@@ -1,0 +1,69 @@
+.tenant-card {
+  width: 175px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+}
+
+.foreground {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.tenant-card-header {
+  background-color: #00000034;
+}
+
+.tenant-card-body {
+  background-color: #00000034;
+}
+
+.modify-toolbar {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  height: 50px;
+  background-color: #1a1a1a;
+  grid-template-columns: auto auto auto;
+  z-index: 10;
+}
+
+.tenant-button:hover {
+  background-color: #2e2e2e !important;
+}
+
+.tenant-button:active {
+  background-color: #4e4e4e !important;
+}
+
+@media only screen and (min-width: 801px) {
+  .tenant-card-container {
+    grid-template-columns: auto auto auto auto;
+    grid-area: auto;
+  }
+}
+@media only screen and (min-width: 591px) and (max-width: 801px) {
+  .tenant-card-container {
+    grid-template-columns: auto auto auto;
+    grid-area: auto;
+  }
+}
+@media only screen and (min-width: 390px) and (max-width: 590px) {
+  .tenant-card-container {
+    grid-template-columns: auto auto;
+    grid-area: auto;
+  }
+}
+@media only screen and (max-width: 389px) {
+  .tenant-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
